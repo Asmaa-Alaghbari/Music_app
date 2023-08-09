@@ -12,9 +12,9 @@ function App() {
   return (
     <>
       <Home />
-      {/* <Sidenav /> */}
-      {/* <Playlist /> */}
-      {/* <MusicTab /> */}
+      <Sidenav
+      <Playlist />
+      <MusicTab />
     </>
   );
 }
