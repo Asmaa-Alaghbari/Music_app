@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      {/* <Home /> */}
+      <Home />
       {/* <Sidenav /> */}
       {/* <Playlist /> */}
       {/* <MusicTab /> */}

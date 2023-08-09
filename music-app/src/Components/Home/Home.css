@@ -1,0 +1,32 @@
+.container .maincomponents {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 100px;
+}
+body {
+  background-color: black;
+}
+
+.artist {
+  margin-bottom: 85px;
+  margin-left: 50px;
+}
+
+.seemore {
+  color: rgb(136, 136, 136);
+}
+.seemore2 {
+  color: rgb(136, 136, 136);
+  margin-left: 50px;
+}
+.Top {
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+}
