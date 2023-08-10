@@ -10,12 +10,16 @@ import "./App.css";
 
 function App() {
   return (
-    <>
-      <Home />
-      <Sidenav />
-      <Playlist />
+    <div>
+      <div className="components">
+        <div className="explore">
+          <Home />
+          <Playlist />
+        </div>
+        <Sidenav />
+      </div>
       <MusicTab />
-    </>
+    </div>
   );
 }
 
