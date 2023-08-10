@@ -14,7 +14,7 @@ function App() {
       {/* <Home /> */}
       {/* <Sidenav /> */}
       {/* <Playlist /> */}
-      {/* <MusicTab /> */}
+      <MusicTab />
     </>
   );
 }

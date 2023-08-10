@@ -1,0 +1,207 @@
+.bar {
+  background: rgb(47, 32, 93);
+  background: linear-gradient(
+    142deg,
+    rgba(47, 32, 93, 1) 0%,
+    rgba(24, 19, 59, 1) 30%,
+    rgba(22, 18, 52, 1) 100%
+  );
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  color: white;
+}
+
+.tab1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.ti-art {
+  display: flex;
+  flex-direction: column;
+}
+
+#image {
+  margin-top: 17px;
+  margin-left: 100px;
+  width: 120px;
+  height: 70px;
+  border-radius: 10%;
+}
+
+#title {
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+#artist {
+  margin-left: 20px;
+  margin-top: 15px;
+  font-size: 14px;
+  position: relative;
+}
+
+.tab2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.like-save {
+  display: flex;
+  flex-direction: row;
+}
+
+#like {
+  margin-top: 15px;
+  margin-left: 110px;
+  position: relative;
+  text-align: center;
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+  line-height: 1.5;
+}
+
+#save {
+  padding: 1px;
+  margin-top: 13px;
+  margin-left: 5px;
+  position: relative;
+  font-size: 25px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}
+
+#save:hover,
+#like:hover,
+#skip-back:hover,
+#prev:hover,
+#pause:hover,
+#next:hover,
+#skip-forward:hover,
+#sound-ic:hover,
+#repeat:hover,
+#shuffle:hover {
+  background-color: grey;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.mp-slide {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-player {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+#skip-back {
+  margin-left: 300px;
+  margin-top: 10px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+#prev {
+  margin-left: 10px;
+  margin-top: 10px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+#pause {
+  margin-left: 20px;
+  margin-top: 10px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+}
+
+#next {
+  margin-top: 10px;
+  margin-left: 20px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+#skip-forward {
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+#repeat {
+  margin-top: 15px;
+  margin-left: 300px;
+  position: relative;
+  text-align: center;
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+}
+
+#shuffle {
+  margin-top: 15px;
+  margin-left: 5px;
+  position: relative;
+  text-align: center;
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+}
+
+.music {
+  position: relative;
+  max-width: 1000px;
+  margin-left: 110px;
+  margin-top: 15px;
+}
+
+.tab3 {
+  display: flex;
+  flex-direction: row;
+}
+
+#sound-ic {
+  position: relative;
+  text-align: center;
+  font-size: 25px;
+  width: 35px;
+  height: 35px;
+  line-height: 1.5;
+  margin-left: 150px;
+  margin-top: 60px;
+}
+
+.sound {
+  margin-left: 5px;
+  margin-top: 65px;
+  position: relative;
+  max-width: 160px;
+}
+
+#sound-slide:hover,
+#music-slide:hover {
+  cursor: pointer;
+}
