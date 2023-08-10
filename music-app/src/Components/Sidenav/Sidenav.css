@@ -1,0 +1,71 @@
+/* Sidenav.css */
+
+/* Sidenav default*/
+.sidenav {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  padding: 20px;
+  background-color: #161234;
+  text-align: left;
+  color: white;
+}
+
+/* Open sidenav icon (Burger) */
+.burger-icon {
+  display: none;
+  cursor: pointer;
+  color: #161234;
+  margin: 10px;
+  font-size: 25px;
+  width: 25px;
+}
+
+/* Close sidenav icon (X) */
+.close-button {
+  display: none;
+  cursor: pointer;
+  color: lightslategray;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+}
+
+li:hover,
+.close-button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* Show the sidenav when showSidenav is true */
+.sidenav.show {
+  display: block;
+  width: 30%;
+  transform-style: flat;
+}
+
+/* Hide the full menu by default for smaller screens */
+@media only screen and (max-width: 768px) {
+  .sidenav {
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-right: 0;
+    display: none;
+    overflow-x: hidden;
+  }
+
+  .close-button,
+  .burger-icon {
+    display: block;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .sidenav {
+    width: 15%;
+  }
+}

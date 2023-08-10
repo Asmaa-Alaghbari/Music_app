@@ -1,0 +1,13 @@
+.folowers {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: rgb(136, 136, 136);
+}
+.heart {
+  margin-right: 5px;
+  color: rgb(105, 101, 101);
+}
+.soundwave {
+  margin-right: 5px;
+}
