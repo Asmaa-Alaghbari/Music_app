@@ -16,6 +16,8 @@ import {
 
 export default function Music_Tab(props) {
   const [active, setActive] = useState(false);
+  const [value1, setValue1] = useState(0);
+  const [value2, setValue2] = useState(0);
   return (
     <div class="bar">
       <div class="tab1">
@@ -62,11 +64,13 @@ export default function Music_Tab(props) {
           <div class="music">
             <input
               type="range"
-              min="1"
+              min="0"
               max="100"
-              value="100"
               class="slider"
               id="myRange"
+              value1="value1"
+              defaultValue="0"
+              onChange={(e) => setValue1(e.target.value1)}
             ></input>
           </div>
         </div>
@@ -79,11 +83,13 @@ export default function Music_Tab(props) {
         <div class="sound">
           <input
             type="range"
-            min="1"
+            min="0"
             max="100"
-            value="100"
-            class="slider"
-            id="myRange"
+            class="slider2"
+            id="myRange2"
+            onChange={(f) => setValue2(f.target.value2)}
+            defaultValue="50"
+            value2="value2"
           ></input>
         </div>
       </div>
