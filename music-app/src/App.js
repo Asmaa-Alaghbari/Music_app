@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Home />
-      <Sidenav
+      <Sidenav />
       <Playlist />
       <MusicTab />
     </>
