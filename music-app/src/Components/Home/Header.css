@@ -1,0 +1,48 @@
+.Header {
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.Title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.searchbar {
+  padding-bottom: 10px;
+  padding: 0;
+  border: none;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  font-size: 15px;
+  text-align: center;
+  outline: none;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+.search {
+  display: flex;
+  align-items: center;
+  display: inline-block;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2rem;
+  padding-top: 5px;
+}
+.bell {
+  margin-left: 750px;
+  margin-right: 40px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.glass {
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 10px;
+}

@@ -1,0 +1,94 @@
+/* Playlist.css */
+
+h2 {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.playlist {
+  margin-top: 40px;
+}
+
+.playlist ul {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.playlist li {
+  margin-bottom: 10px;
+  color: lightslategray;
+}
+
+/* Lists' icons */
+.icons-style {
+  margin-right: 10px;
+}
+
+/* Modal */
+.modal-custom {
+  background-color: #161234;
+  color: white;
+  width: 50%;
+  height: 50%;
+  margin: 200px auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Close Modal */
+.close-modal-icon {
+  cursor: pointer;
+  color: lightslategray;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  z-index: 1;
+}
+
+/* Album picture */
+.album-img {
+  width: 30%;
+  border-radius: 10px;
+  background-color: white;
+  color: #161243;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Create new playlist Form */
+form {
+  margin-top: 30px;
+}
+
+.modal-form {
+  text-align: center;
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+  z-index: 1;
+}
+
+input {
+  width: 50%;
+  height: 30px;
+  margin-top: 15px;
+  border-radius: 5px;
+  padding: auto;
+}
+
+/* Create new playlist icon */
+.create-new-playlist {
+  padding-top: 20px;
+  margin-left: 10px;
+  background-color: transparent;
+  color: lightslategray;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.create-new-playlist:hover,
+.close-modal-icon:hover {
+  color: white;
+}
