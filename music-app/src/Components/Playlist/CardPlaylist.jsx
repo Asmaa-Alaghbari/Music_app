@@ -1,5 +1,5 @@
-import { AiFillPlayCircle } from "react-icons/ai";
-import { PiMusicNotesFill } from "react-icons/pi";
+import { AiFillPlayCircle } from "react-icons/ai"; //play button icon
+import { PiMusicNotesFill } from "react-icons/pi"; //music note icon
 
 import "./Playlist.css";
 
