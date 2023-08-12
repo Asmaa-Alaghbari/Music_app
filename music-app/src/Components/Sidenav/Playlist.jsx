@@ -16,6 +16,15 @@ export default function Playlist({ closeSidenav }) {
   // Modal for creating new playlist
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
+  // Playlist state for creating new playlist
+  const [playlists, setPlaylists] = useState([]);
+
+  // Track new playlist name input
+  const [newPlaylistName, setNewPlaylistName] = useState("");
+
+  // Track error message for existing playlist name
+  const [errorMessage, setErrorMessage] = useState(""); // Track error message
+
   // Open Modal for creating new playlist
   function openModal() {
     setModalIsOpen(true);
@@ -25,6 +34,32 @@ export default function Playlist({ closeSidenav }) {
   // Close Modal for creating new playlist
   function closeModal() {
     setModalIsOpen(false);
+    setNewPlaylistName(""); // Clear input field on closing modal
+    setErrorMessage(""); // Clear error message on closing modal
+  }
+
+  // Handle form submission and add new playlist
+  function handleCreatePlaylist(event) {
+    event.preventDefault();
+
+    // Existing playlists
+    const existingPlaylists = ["Favourite", "Inspirational", "Hits", "Top 100"];
+
+    // Trim the input playlist name to remove leading and trailing spaces
+    const trimmedPlaylistName = newPlaylistName.trim();
+
+    if (
+      trimmedPlaylistName !== "" &&
+      !playlists.includes(trimmedPlaylistName) &&
+      !existingPlaylists.includes(trimmedPlaylistName)
+    ) {
+      setPlaylists([...playlists, newPlaylistName]);
+      setNewPlaylistName("");
+      setErrorMessage(""); // Clear error message on successful submission
+    } else {
+      // Set error message if playlist already exists
+      setErrorMessage("Playlist already exists");
+    }
   }
 
   return (
@@ -51,6 +86,14 @@ export default function Playlist({ closeSidenav }) {
           <GiMusicalNotes className="icons-style" />
           <span className="playlist-lists">Top 100</span>
         </li>
+
+        {/* Display added playlists */}
+        {playlists.map((playlist, index) => (
+          <li key={index}>
+            <GiMusicalNotes className="icons-style" />
+            <span className="playlist-lists">{playlist}</span>
+          </li>
+        ))}
       </ul>
 
       {/* Modal for creating new playlist */}
@@ -63,13 +106,40 @@ export default function Playlist({ closeSidenav }) {
         <div className="close-modal-icon" onClick={closeModal}>
           <FaTimes />
         </div>
-        <form>
+        <form onSubmit={handleCreatePlaylist}>
           <img src={AlbumPicture} alt="Album" className="album-img" />
           <div className="modal-form">
-            <input type="text" placeholder="Playlist name" />
-            <MdPlaylistAdd className="create-new-playlist" />
+            <input
+              className="playlist-input"
+              type="text"
+              placeholder="New Playlist Name"
+              value={newPlaylistName}
+              onChange={(e) => setNewPlaylistName(e.target.value)}
+            />
+            <button
+              disabled={!newPlaylistName}
+              type="submit"
+              className="create-new-playlist"
+            >
+              <MdPlaylistAdd />
+            </button>
+          </div>
+
+          {/* Display error message */}
+          <div className="error-msg">
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
           </div>
         </form>
+
+        {/* Display added playlists in the Modal */}
+        <div className="added-playlist-modal">
+          <h5>Added Playlist: </h5>
+          {playlists.map((playlist, index) => (
+            <div className="added-playlist-list" key={index}>
+              {playlist}
+            </div>
+          ))}
+        </div>
       </Modal>
     </div>
   );
