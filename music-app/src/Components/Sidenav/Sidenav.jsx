@@ -1,6 +1,6 @@
 // Sidenav.jsx
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Profile from "./Profile"; // Profile component
 import Menu from "./Menu"; // Menu component
 import Playlist from "./Playlist"; // Playlist component
@@ -21,6 +21,23 @@ export default function Sidenav() {
     setShowSidenav(false);
   };
 
+  // Sidenav ref to handle click outside of sidenav
+  const sidenavRef = useRef(null);
+
+  // Handle click outside of sidenav
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!sidenavRef.current.contains(event.target) && showSidenav) {
+        setShowSidenav(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showSidenav]);
+
   return (
     <nav>
       {/* Burger Icon  */}
@@ -28,7 +45,8 @@ export default function Sidenav() {
         {showSidenav ? <FaTimes /> : <FaBars />}
       </div>
 
-      <div className={`sidenav ${showSidenav ? "show" : ""}`}>
+      {/* Show Sidenav on the small devices*/}
+      <div className={`sidenav ${showSidenav ? "show" : ""}`} ref={sidenavRef}>
         {/* Close Button */}
         <div className="close-button" onClick={closeSidenav}>
           <FaTimes />
@@ -36,9 +54,9 @@ export default function Sidenav() {
 
         {/* Profile, Menu, and Playlist components */}
         <aside>
-          <Profile />
+          <Profile closeSidenav={closeSidenav} />
           <Menu />
-          {/*close the sidenav when clicking on the profile*/}
+          {/*close the sidenav when clicking on the playlist*/}
           <Playlist closeSidenav={closeSidenav} />
         </aside>
       </div>

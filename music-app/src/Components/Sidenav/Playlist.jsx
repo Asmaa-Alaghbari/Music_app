@@ -7,6 +7,7 @@ import { GiMusicalNotes } from "react-icons/gi"; // Music note icon
 import { AiOutlineHeart } from "react-icons/ai"; // Heart icon
 import { FaTimes } from "react-icons/fa"; // Close icon
 import AlbumPicture from "./images/AlbumPicture.png"; // Album picture
+
 import "./Playlist.css"; // Stylesheet
 
 // Modal for creating new playlist
@@ -14,7 +15,8 @@ Modal.setAppElement("#root");
 
 export default function Playlist({ closeSidenav }) {
   // Modal for creating new playlist
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [createNewAlbumModalIsOpen, setCreateNewAlbumModalIsOpen] =
+    useState(false);
 
   // Playlist state for creating new playlist
   const [playlists, setPlaylists] = useState([]);
@@ -23,17 +25,20 @@ export default function Playlist({ closeSidenav }) {
   const [newPlaylistName, setNewPlaylistName] = useState("");
 
   // Track error message for existing playlist name
-  const [errorMessage, setErrorMessage] = useState(""); // Track error message
+  const [errorMessage, setErrorMessage] = useState("");
+
+  // Track the index of the last newly added playlist
+  const [lastNewPlaylistIndex, setLastNewPlaylistIndex] = useState(-1);
 
   // Open Modal for creating new playlist
-  function openModal() {
-    setModalIsOpen(true);
+  function openCreateNewAlbumModal() {
+    setCreateNewAlbumModalIsOpen(true);
     closeSidenav(); // Close the sidenav
   }
 
   // Close Modal for creating new playlist
-  function closeModal() {
-    setModalIsOpen(false);
+  function closeCreateNewAlbumModal() {
+    setCreateNewAlbumModalIsOpen(false);
     setNewPlaylistName(""); // Clear input field on closing modal
     setErrorMessage(""); // Clear error message on closing modal
   }
@@ -48,14 +53,21 @@ export default function Playlist({ closeSidenav }) {
     // Trim the input playlist name to remove leading and trailing spaces
     const trimmedPlaylistName = newPlaylistName.trim();
 
+    // Check if trimmedPlaylistName matches any existing playlist name after trimming
+    const nameExists = playlists.some(
+      (playlist) => playlist.trim() === trimmedPlaylistName
+    );
+
     if (
       trimmedPlaylistName !== "" &&
-      !playlists.includes(trimmedPlaylistName) &&
+      !nameExists &&
       !existingPlaylists.includes(trimmedPlaylistName)
     ) {
-      setPlaylists([...playlists, newPlaylistName]);
+      const updatedPlaylists = [newPlaylistName, ...playlists];
+      setPlaylists(updatedPlaylists);
       setNewPlaylistName("");
       setErrorMessage(""); // Clear error message on successful submission
+      setLastNewPlaylistIndex(0); // Set the index of the last newly added playlist
     } else {
       // Set error message if playlist already exists
       setErrorMessage("Playlist already exists");
@@ -66,7 +78,7 @@ export default function Playlist({ closeSidenav }) {
     <div className="playlist">
       <h3 className="playlist-lists">Playlist</h3>
       <ul>
-        <li onClick={openModal}>
+        <li onClick={openCreateNewAlbumModal}>
           <MdPlaylistAdd className="icons-style" />
           <span className="playlist-lists">Create new</span>
         </li>
@@ -87,25 +99,36 @@ export default function Playlist({ closeSidenav }) {
           <span className="playlist-lists">Top 100</span>
         </li>
 
-        {/* Display added playlists */}
-        {playlists.map((playlist, index) => (
+        {/* Display only the last 5 added playlists */}
+        {playlists.slice(0, 5).map((playlist, index) => (
           <li key={index}>
             <GiMusicalNotes className="icons-style" />
-            <span className="playlist-lists">{playlist}</span>
+            <span className="playlist-lists">
+              {/* Display new label for the last newly added playlist */}
+              {playlist}
+              {index === lastNewPlaylistIndex && (
+                <span className="new-label">New</span>
+              )}
+            </span>
           </li>
         ))}
+
+        {/* Show all playlists */}
+        <p className="more-playlists">Show All</p>
       </ul>
 
       {/* Modal for creating new playlist */}
       <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
+        isOpen={createNewAlbumModalIsOpen}
+        onRequestClose={closeCreateNewAlbumModal}
         className="modal-custom"
       >
         <h2>Create new playlist</h2>
-        <div className="close-modal-icon" onClick={closeModal}>
+        {/* Close Modal icon  */}
+        <div className="close-modal-icon" onClick={closeCreateNewAlbumModal}>
           <FaTimes />
         </div>
+        {/* Form for creating new playlist */}
         <form onSubmit={handleCreatePlaylist}>
           <img src={AlbumPicture} alt="Album" className="album-img" />
           <div className="modal-form">
@@ -113,6 +136,7 @@ export default function Playlist({ closeSidenav }) {
               className="playlist-input"
               type="text"
               placeholder="New Playlist Name"
+              maxLength={20}
               value={newPlaylistName}
               onChange={(e) => setNewPlaylistName(e.target.value)}
             />
@@ -133,8 +157,9 @@ export default function Playlist({ closeSidenav }) {
 
         {/* Display added playlists in the Modal */}
         <div className="added-playlist-modal">
-          <h5>Added Playlist: </h5>
-          {playlists.map((playlist, index) => (
+          <h5>Recent Added Playlist: </h5>
+          {/* Display only last 3 added playlists */}
+          {playlists.slice(0, 3).map((playlist, index) => (
             <div className="added-playlist-list" key={index}>
               {playlist}
             </div>
