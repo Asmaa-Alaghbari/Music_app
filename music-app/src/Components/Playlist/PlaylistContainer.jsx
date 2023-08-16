@@ -1,21 +1,31 @@
-import { GrPrevious } from "react-icons/gr"; //left arrow icon
-import { GrNext } from "react-icons/gr"; //right arrow icon
+import React from "react";
+import {
+  Routes,
+  Route,
+  useNavigate,
+  Link,
+  BrowserRouter,
+} from "react-router-dom";
+import { GrPrevious, GrNext } from "react-icons/gr";
 import CardPlaylist from "./CardPlaylist";
-
 import "./Playlist.css";
 
 export default function PlaylistContainer() {
+  const navigate = useNavigate();
+
+  const handleSeeMoreClick = () => {
+    navigate("/PlaylistsWindow");
+  };
+
   return (
     <div className="playlist-container">
       <div className="infos">
         <h2>Playlists</h2>
 
-        {/*open a new page with playlists*/}
-        <a href="/PlaylistsWindow" target="_blank" rel="noreferrer">
-          See More
-        </a>
+        <button onClick={handleSeeMoreClick}>See More</button>
       </div>
-      <div div className="card-playlist-list">
+
+      <div className="card-playlist-list">
         <button className="arrow arrow-left">
           <GrPrevious />
         </button>

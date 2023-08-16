@@ -21,14 +21,17 @@
   color: #161234;
 }
 
-.playlist-container a {
+.playlist-container button {
+  border: none;
+  background: transparent;
   margin-right: 0.3rem;
   font-size: 0.8rem;
   text-decoration: none;
   color: #9623f4;
+  cursor: pointer;
 }
 
-.playlist-container a:hover {
+.playlist-container button:hover {
   color: black;
 }
 
@@ -157,13 +160,16 @@
   align-items: center;
 }
 
-.genre-container a {
+.genre-container button {
+  background: transparent;
+  border: none;
   font-size: 0.8rem;
   text-decoration: none;
   color: #c7c7c7;
+  cursor: pointer;
 }
 
-.genre-container a:hover {
+.genre-container button:hover {
   color: white;
 }
 
@@ -229,7 +235,7 @@
     justify-content: space-around;
     align-items: center;
   }
-  a {
+  button {
     font-size: 0.8rem;
   }
   .playlist-container {
