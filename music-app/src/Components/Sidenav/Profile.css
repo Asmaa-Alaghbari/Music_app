@@ -9,6 +9,117 @@
 .profile-img {
   width: 30%;
   margin-top: 20px;
+  margin-bottom: 10px;
   border-radius: 10px;
   background-color: white;
+  border: none;
+}
+
+/* Apply styles to profile-img on edit-profile-text hover */
+.profile-img:hover,
+.profile-img-container:hover .profile-img {
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.profile-bio {
+  margin: 10px auto;
+}
+
+/* Profile picture container */
+.profile-img-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Edit profile text */
+.edit-profile-text {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px;
+  margin: auto;
+  text-align: center;
+  font-size: 0.7em;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* Show edit profile text on hover */
+.profile-img-container:hover .edit-profile-text,
+.profile-img-container:hover .edit-profile-text-modal {
+  opacity: 1;
+}
+
+/* Profile modal form */
+.profile-modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+}
+
+/* Form profile picture */
+form img.profile-img {
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Image edit icon */
+.edit-profile-text-modal {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px;
+  font-size: 0.8em;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* Profile username input */
+input.profile-input {
+  width: 50%;
+  height: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Profile about input */
+.profile-about {
+  width: 75%;
+  height: 50px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* Profile save button */
+.profile-save-btn {
+  width: 50px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #402c57;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-save-btn:hover {
+  background-color: #b27af1;
 }
