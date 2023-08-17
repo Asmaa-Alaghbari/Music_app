@@ -1,28 +1,19 @@
 import React from "react";
-import {
-  Routes,
-  Route,
-  useNavigate,
-  Link,
-  BrowserRouter,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { GrPrevious, GrNext } from "react-icons/gr";
 import CardPlaylist from "./CardPlaylist";
 import "./Playlist.css";
+import PlaylistsWindow from "./PlaylistsWindow2/PlaylistsWindow";
 
 export default function PlaylistContainer() {
-  const navigate = useNavigate();
-
-  const handleSeeMoreClick = () => {
-    navigate("/PlaylistsWindow");
-  };
-
   return (
     <div className="playlist-container">
       <div className="infos">
         <h2>Playlists</h2>
 
-        <button onClick={handleSeeMoreClick}>See More</button>
+        <Link to="/playlists-window" component={PlaylistsWindow}>
+          See More
+        </Link>
       </div>
 
       <div className="card-playlist-list">
