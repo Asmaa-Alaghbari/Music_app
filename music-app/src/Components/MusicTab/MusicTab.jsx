@@ -28,9 +28,9 @@ export default function Music_Tab(props) {
         </div>
       </div>
 
-      <div class="tab2">
-        <div class="mp=slide">
-          <div class="music-player">
+      <div className="tab2">
+        <div className="mp=slide">
+          <div className="music-player">
             <div id="like">
               <div isActive={active} onClick={() => setActive(!active)}>
                 <AiOutlineHeart />
@@ -61,7 +61,7 @@ export default function Music_Tab(props) {
               <TbArrowsShuffle />
             </div>
           </div>
-          <div class="music">
+          <div className="music">
             <input
               type="range"
               min="0"
