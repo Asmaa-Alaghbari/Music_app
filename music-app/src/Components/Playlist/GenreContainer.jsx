@@ -7,7 +7,7 @@ export default function GenreContainer() {
     <div className="genre-container">
       <div className="infos">
         <h2>Genres</h2>
-        <a href="/">See More</a>
+        <button>See More</button>
       </div>
       <div className="card-genre-list">
         <CardGenre />

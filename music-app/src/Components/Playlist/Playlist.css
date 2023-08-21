@@ -7,7 +7,7 @@
 .playlists {
   width: 100%;
   height: fit-content;
-  margin-bottom: 9rem;
+  margin-bottom: 4rem;
 }
 
 .playlist-container .infos {
@@ -22,13 +22,16 @@
 }
 
 .playlist-container a {
+  border: none;
+  background: transparent;
   margin-right: 0.3rem;
   font-size: 0.8rem;
   text-decoration: none;
   color: #9623f4;
+  cursor: pointer;
 }
 
-.playlist-container a:hover {
+.playlist-container button:hover {
   color: black;
 }
 
@@ -78,7 +81,7 @@
 }
 
 .cardPlaylist {
-  margin: 0 auto;
+  margin: 0 0.5rem;
   position: relative;
   background-image: url("img/1.png");
   width: 8.5rem;
@@ -157,13 +160,16 @@
   align-items: center;
 }
 
-.genre-container a {
+.genre-container button {
+  background: transparent;
+  border: none;
   font-size: 0.8rem;
   text-decoration: none;
   color: #c7c7c7;
+  cursor: pointer;
 }
 
-.genre-container a:hover {
+.genre-container button:hover {
   color: white;
 }
 
@@ -220,16 +226,13 @@
 
 @media (min-width: 1024px) {
   .playlists {
-    position: absolute;
-    right: 0;
-    bottom: 110px;
     margin-top: 1rem;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
-  a {
+  button {
     font-size: 0.8rem;
   }
   .playlist-container {

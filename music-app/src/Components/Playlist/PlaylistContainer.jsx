@@ -1,8 +1,9 @@
-import { GrPrevious } from "react-icons/gr"; //left arrow icon
-import { GrNext } from "react-icons/gr"; //right arrow icon
+import React from "react";
+import { Link } from "react-router-dom";
+import { GrPrevious, GrNext } from "react-icons/gr";
 import CardPlaylist from "./CardPlaylist";
-
 import "./Playlist.css";
+import PlaylistsWindow from "./PlaylistsWindow2/PlaylistsWindow";
 
 export default function PlaylistContainer() {
   return (
@@ -10,12 +11,12 @@ export default function PlaylistContainer() {
       <div className="infos">
         <h2>Playlists</h2>
 
-        {/*open a new page with playlists*/}
-        <a href="/PlaylistsWindow" target="_blank" rel="noreferrer">
+        <Link to="/playlists-window" component={PlaylistsWindow}>
           See More
-        </a>
+        </Link>
       </div>
-      <div div className="card-playlist-list">
+
+      <div className="card-playlist-list">
         <button className="arrow arrow-left">
           <GrPrevious />
         </button>
