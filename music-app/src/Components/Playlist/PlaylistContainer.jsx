@@ -11,7 +11,11 @@ export default function PlaylistContainer() {
       <div className="infos">
         <h2>Playlists</h2>
 
-        <Link to="/playlists-window" component={PlaylistsWindow}>
+        <Link
+          to="/playlists-window"
+          component={PlaylistsWindow}
+          className="seeMorebtn"
+        >
           See More
         </Link>
       </div>

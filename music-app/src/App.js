@@ -14,6 +14,7 @@ function App() {
   return (
     <div>
       <div className="components">
+        <Sidenav />
         <div className="explore">
           {/* <Home /> */}
           <BrowserRouter>
@@ -24,9 +25,8 @@ function App() {
             </Routes>
           </BrowserRouter>
         </div>
-        <Sidenav />
       </div>
-      <MusicTab />
+      {/* <MusicTab /> */}
     </div>
   );
 }

@@ -17,7 +17,7 @@ export default function CardPlaylist() {
             <h6>No. tracks</h6>
           </div>
         </div>
-        <button>
+        <button id="play">
           <AiFillPlayCircle />
         </button>
       </div>
