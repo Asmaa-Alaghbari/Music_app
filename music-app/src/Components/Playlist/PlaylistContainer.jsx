@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { GrPrevious, GrNext } from "react-icons/gr";
+import { GrPrevious, GrNext } from "react-icons/gr"; // left and right icons
 import CardPlaylist from "./CardPlaylist";
 import "./Playlist.css";
 import PlaylistsWindow from "./PlaylistsWindow2/PlaylistsWindow";
