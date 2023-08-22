@@ -59,6 +59,7 @@ h5 {
   color: grey;
 }
 
+/* this media is only for the number of cards on a row*/
 @media (min-width: 545px) {
   .cards-list {
     display: grid;

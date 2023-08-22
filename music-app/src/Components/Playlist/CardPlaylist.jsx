@@ -1,7 +1,7 @@
 import { AiFillPlayCircle } from "react-icons/ai"; //play button icon
 import { PiMusicNotesFill } from "react-icons/pi"; //music note icon
 
-import "./Playlist.css";
+import "./PlayList.css";
 
 export default function CardPlaylist() {
   return (

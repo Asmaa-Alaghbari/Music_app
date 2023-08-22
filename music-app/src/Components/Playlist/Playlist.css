@@ -19,6 +19,7 @@
 
 .playlist-container h2 {
   color: #161234;
+  padding: 0;
 }
 
 .playlist-container .seeMorebtn {
@@ -151,7 +152,7 @@
   padding: 0 0.2rem;
   color: white;
   width: 85%;
-  height: 13rem;
+  height: 12rem;
   overflow: hidden;
   background-color: #161234;
   border-radius: 1.5rem;
@@ -162,6 +163,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.genre-container h2 {
+  padding: 0;
 }
 
 .genre-container button {
@@ -197,6 +202,30 @@
   cursor: pointer;
 }
 
+@media (min-width: 450px) {
+  .list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+  .genre-container .card-genre-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+}
+@media (min-width: 620px) {
+  .list-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+  .genre-container .card-genre-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+}
 @media (min-width: 768px) {
   .playlist-container {
     margin: 1rem auto;
@@ -218,12 +247,12 @@
   }
 
   .genre-container {
-    height: 10rem;
+    height: 7.5rem;
   }
 
   .genre-container .card-genre-list {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
   }
 }
@@ -249,7 +278,7 @@
   }
 
   .genre-container {
-    width: 30%;
+    width: 35%;
     height: 13rem;
   }
 

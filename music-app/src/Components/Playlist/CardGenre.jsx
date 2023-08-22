@@ -1,4 +1,4 @@
-import "./Playlist.css";
+import "./PlayList.css";
 
 export default function CardGenre() {
   return (

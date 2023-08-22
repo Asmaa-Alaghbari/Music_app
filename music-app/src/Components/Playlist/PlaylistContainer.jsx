@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { GrPrevious, GrNext } from "react-icons/gr"; // left and right icons
 import CardPlaylist from "./CardPlaylist";
-import "./Playlist.css";
+import "./PlayList.css";
 import PlaylistsWindow from "./PlaylistsWindow2/PlaylistsWindow";
 
 export default function PlaylistContainer() {
@@ -11,6 +11,7 @@ export default function PlaylistContainer() {
       <div className="infos">
         <h2>Playlists</h2>
 
+        {/* Show all playlists */}
         <Link
           to="/playlists-window"
           component={PlaylistsWindow}
@@ -21,13 +22,17 @@ export default function PlaylistContainer() {
       </div>
 
       <div className="card-playlist-list">
+        {/* Back button */}
         <button className="arrow arrow-left">
           <GrPrevious />
         </button>
+        {/* Next button */}
         <button className="arrow arrow-right">
           <GrNext />
         </button>
         <div className="list-container">
+          <CardPlaylist />
+          <CardPlaylist />
           <CardPlaylist />
           <CardPlaylist />
           <CardPlaylist />

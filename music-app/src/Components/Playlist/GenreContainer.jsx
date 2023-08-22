@@ -1,6 +1,6 @@
 import CardGenre from "./CardGenre";
 
-import "./Playlist.css";
+import "./PlayList.css";
 
 export default function GenreContainer() {
   return (
