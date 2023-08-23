@@ -131,13 +131,13 @@ export default function Music_Tab(props) {
           <div className="b">
             <input
               type="range"
-              min="0"
-              max="max"
-              step="1"
+              min={0}
+              max={max}
+              step={1}
               className="slider1"
               id="myRange1"
-              value3="value1"
-              defaultValue="0"
+              value={value1}
+              defaultValue={0}
               onChange={(e) => setValue1(e.target.value)}
             ></input>
           </div>
@@ -154,14 +154,14 @@ export default function Music_Tab(props) {
         <div className="sound">
           <input
             type="range"
-            min="0"
-            max="max"
-            step="1"
+            min={0}
+            max={100}
+            step={1}
             className="slider2"
             id="myRange2"
+            value={value2}
+            defaultValue={50}
             onChange={(f) => setValue2(f.target.value)}
-            defaultValue="50"
-            value4="value2"
           ></input>
         </div>
         <div id="soundValue">{value2}</div>
