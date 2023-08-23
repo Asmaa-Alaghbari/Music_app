@@ -169,7 +169,7 @@
   padding: 0;
 }
 
-.genre-container button {
+.genre-container a {
   background: transparent;
   border: none;
   font-size: 0.8rem;
@@ -178,7 +178,7 @@
   cursor: pointer;
 }
 
-.genre-container button:hover {
+.genre-container a:hover {
   color: white;
 }
 

@@ -1,8 +1,8 @@
-import { MdNavigateBefore } from "react-icons/md"; //Back arrow icon
-import { Link } from "react-router-dom"; //to use the link
-import Playlist from "../Playlist"; //to go back in the Home Page
-import Cards from "./Cards";
-import "./PlaylistsWindow.css";
+import { MdNavigateBefore } from "react-icons/md"; // back arrow icon
+import { Link } from "react-router-dom"; // use to go back in the home Page
+import Playlist from "./HomePlaylist";
+import Cards from "./PlaylistsWindowCards";
+import "./PlaylistsWindow.css"; // staylesheet
 
 export default function PlaylistsWindow() {
   return (

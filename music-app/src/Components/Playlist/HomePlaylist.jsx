@@ -1,7 +1,7 @@
 import PlaylistContainer from "./PlaylistContainer"; //Playlist Component
 import GenreContainer from "./GenreContainer"; //Genre Component
 
-import "./PlayList.css"; //Stylesheet
+import "./HomePlaylist.css"; //Stylesheet
 
 export default function Playlist() {
   return (
