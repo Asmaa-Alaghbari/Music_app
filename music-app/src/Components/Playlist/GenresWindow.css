@@ -38,35 +38,10 @@
   border-radius: 0.5rem;
 }
 
-.card:hover {
-  background-color: rgba(152, 148, 180, 0.199);
-}
-
 .content {
   margin: 1rem auto;
   width: 80%;
   height: fit-content;
-}
-
-.img-container {
-  position: relative;
-}
-
-.buttonPlay {
-  display: none;
-  position: absolute;
-  bottom: 0;
-  right: 0.5rem;
-  font-size: 3.5rem;
-  border-radius: 50%;
-}
-
-.card:hover .buttonPlay {
-  display: block;
-}
-
-.buttonPlay:hover {
-  font-size: 3.6rem;
 }
 
 .img-bkg {
