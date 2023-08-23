@@ -52,13 +52,16 @@ export default function Sidenav() {
           <FaTimes />
         </div>
 
-        {/* Profile, Menu, and Playlist components */}
-        <aside>
-          <Profile closeSidenav={closeSidenav} />
-          <Menu />
-          {/*close the sidenav when clicking on the playlist*/}
-          <Playlist closeSidenav={closeSidenav} />
-        </aside>
+        {/* Container for the components with scrolling */}
+        <div className="components-container">
+          {/* Profile, Menu, and Playlist components */}
+          <aside>
+            <Profile closeSidenav={closeSidenav} />
+            <Menu />
+            {/*close the sidenav when clicking on the playlist*/}
+            <Playlist closeSidenav={closeSidenav} />
+          </aside>
+        </div>
       </div>
     </nav>
   );

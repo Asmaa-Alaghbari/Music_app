@@ -12,7 +12,7 @@ import MusicTab from "./Components/MusicTab/MusicTab";
 import "./App.css";
 import OpenedPlaylist from "./Components/Playlist/OpenedPlaylist";
 
-function App() {
+export default function App() {
   return (
     <div>
       <div className="components">
@@ -32,5 +32,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

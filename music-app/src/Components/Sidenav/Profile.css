@@ -30,6 +30,11 @@
 .profile-img-container {
   position: relative;
   display: inline-block;
+  width: 100%;
+}
+
+.profile-img-modal {
+  width: 60%;
 }
 
 /* Edit profile text */
@@ -108,11 +113,11 @@ input.profile-input {
   border-radius: 5px;
 }
 
-/* Profile save button */
-.profile-save-btn {
+/* Profile buttons */
+.profile-btn {
   width: 50px;
   height: 30px;
-  margin-top: 10px;
+  margin: 10px;
   border-radius: 5px;
   background-color: #402c57;
   color: white;
@@ -120,6 +125,10 @@ input.profile-input {
   cursor: pointer;
 }
 
-.profile-save-btn:hover {
+.profile-btn:hover {
   background-color: #b27af1;
+}
+
+.profile-btn:active {
+  background-color: #8d56b7;
 }

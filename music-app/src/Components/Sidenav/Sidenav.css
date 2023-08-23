@@ -41,8 +41,21 @@ li:hover,
 /* Show the sidenav when showSidenav is true */
 .sidenav.show {
   display: block;
-  width: 30%;
+  width: 50%;
   transform-style: flat;
+}
+
+/* Scrolling */
+.sidenav.show .components-container {
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+
+}
+
+/* Customize the scrollbar */
+.sidenav.show .components-container::-webkit-scrollbar {
+  width: 0px;
 }
 
 /* Hide the full menu by default for smaller screens */

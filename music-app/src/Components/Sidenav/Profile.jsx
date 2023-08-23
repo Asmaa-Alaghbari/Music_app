@@ -14,8 +14,23 @@ export default function Profile({ closeSidenav }) {
   // Modal for modifying profile
   const [showProfileModal, setShowProfileModal] = useState(false);
 
+  // Profile picture
   const [selectedFile, setSelectedFile] = useState(null); // Store selected file
   const fileInputRef = useRef(null); // Reference to file input element
+
+  // Profile information
+  const [username, setUsername] = useState("Username");
+  const [bio, setBio] = useState("");
+  const [profilePicture, setProfilePicture] = useState(ProfilePicture);
+
+  // Initial profile information
+  const initialUsername = "Username";
+  const initialBio = "";
+  const initialProfilePicture = ProfilePicture;
+
+  // Modal profile information
+  const [modalProfilePicture, setModalProfilePicture] =
+    useState(profilePicture);
 
   // Open Profile Modal
   const openProfileModal = () => {
@@ -26,7 +41,15 @@ export default function Profile({ closeSidenav }) {
   // Close Profile Modal
   const closeProfileModal = () => {
     setShowProfileModal(false);
-    setSelectedFile(null); // Clear selected file when closing modal
+
+    // Set input values to current state
+    const usernameInput = document.querySelector(".profile-input");
+    const bioInput = document.querySelector(".profile-about");
+    usernameInput.value = username;
+    bioInput.value = bio;
+
+    // Clear selectedFile when closing the modal without saving
+    setSelectedFile(null);
   };
 
   // Handle file selection
@@ -37,15 +60,62 @@ export default function Profile({ closeSidenav }) {
     }
   };
 
+  // Handle save button
+  const handleSave = () => {
+    // Update profile picture if a new file was selected
+    let updatedProfilePicture = profilePicture;
+    if (selectedFile) {
+      updatedProfilePicture = URL.createObjectURL(selectedFile);
+    }
+
+    // Update username and bio
+    const usernameInput = document.querySelector(".profile-input");
+    const bioInput = document.querySelector(".profile-about");
+    const updatedUsername = usernameInput.value;
+    const updatedBio = bioInput.value;
+
+    // Update profile information
+    setModalProfilePicture(updatedProfilePicture);
+    setProfilePicture(updatedProfilePicture);
+    setUsername(updatedUsername);
+    setBio(updatedBio);
+
+    // Clear selectedFile after saving
+    setSelectedFile(null);
+
+    // Close modal
+    closeProfileModal();
+  };
+
+  // Handle clear button
+  const handleClear = () => {
+    // Clear selectedFile
+    setSelectedFile(null);
+
+    // Reset username and bio input values
+    const usernameInput = document.querySelector(".profile-input");
+    const bioInput = document.querySelector(".profile-about");
+    usernameInput.value = initialUsername;
+    bioInput.value = initialBio;
+
+    // Reset profile picture
+    setModalProfilePicture(initialProfilePicture);
+  };
+
   return (
     <>
       <div className="profile">
-        <div className="profile-img-container" onClick={openProfileModal}>
-          <img src={ProfilePicture} alt="Profile" className="profile-img" />
+        <div className="profile-img-container">
+          <img
+            src={profilePicture}
+            alt="Profile"
+            className="profile-img"
+            onClick={openProfileModal}
+          />
           <span className="edit-profile-text">Edit profile</span>
         </div>
-        <h3 className="profile-username">Username</h3>
-        <p className="profile-bio">Bio</p>
+        <h3 className="profile-username">{username}</h3>
+        <p className="profile-bio">{bio}</p>
       </div>
 
       {/* Profile Modal */}
@@ -63,23 +133,25 @@ export default function Profile({ closeSidenav }) {
         {/* Form for editing profile */}
         <form className="profile-modal-form">
           {/* Display selected file */}
-          {selectedFile ? (
+          <div
+            className="profile-img-modal"
+            onClick={() => fileInputRef.current.click()} // Trigger file input click
+          >
             <img
-              src={URL.createObjectURL(selectedFile)}
+              src={
+                selectedFile
+                  ? URL.createObjectURL(selectedFile)
+                  : modalProfilePicture
+              }
               alt="Profile"
               className="profile-img"
             />
-          ) : (
-            <div
-              className="profile-img-container"
-              onClick={() => fileInputRef.current.click()} // Trigger file input click
-            >
-              <img src={ProfilePicture} alt="Profile" className="profile-img" />
+            {selectedFile && (
               <span className="edit-profile-text-modal">
                 <FaCamera />
               </span>
-            </div>
-          )}
+            )}
+          </div>
 
           {/* Hidden file input - Change profile picture */}
           <input
@@ -96,7 +168,9 @@ export default function Profile({ closeSidenav }) {
             type="text"
             className="profile-input"
             placeholder="Username"
+            minLength={3}
             maxLength={15}
+            defaultValue={username}
           />
 
           {/* About/Bio */}
@@ -104,13 +178,22 @@ export default function Profile({ closeSidenav }) {
             className="profile-about"
             placeholder="Bio"
             maxLength={80}
+            defaultValue={bio}
           />
-          <button className="profile-save-btn">Save</button>
+
+          {/* Save button */}
+          <div className="profile-btn-spacer">
+            <button type="button" className="profile-btn" onClick={handleSave}>
+              Save
+            </button>
+
+            {/* Reset default information button */}
+            <button type="button" className="profile-btn" onClick={handleClear}>
+              Clear
+            </button>
+          </div>
         </form>
       </Modal>
     </>
   );
 }
-
-
-// I want to when I update somthing in the profile modal, it will update the profile in the sidenav 
