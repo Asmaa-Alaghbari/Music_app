@@ -1,7 +1,7 @@
 /* Playlist.css */
 
 h2 {
-  padding-top: 15px;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -62,6 +62,7 @@ form {
   margin-top: 30px;
 }
 
+/* Create new playlist Form */
 .modal-form {
   text-align: center;
   display: flex;
@@ -136,5 +137,9 @@ input.playlist-input {
   /* Album picture */
   .album-img {
     width: 20%;
+  }
+
+  .modal-custom {
+    width: 30%;
   }
 }

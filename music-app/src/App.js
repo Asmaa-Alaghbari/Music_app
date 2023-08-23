@@ -8,7 +8,7 @@ import MusicTab from "./Components/MusicTab/MusicTab";
 
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div>
       <div className="components">
@@ -22,5 +22,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
