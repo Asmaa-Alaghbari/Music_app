@@ -354,19 +354,20 @@
   #image {
     height: 35px;
     width: 60px;
-    margin-top: 10px;
+    margin-top: 12px;
     margin-left: 15px;
   }
 
   #title {
+    margin-top: 5px;
     font-size: 15px;
-    margin-top: 0;
     margin-left: 0;
   }
 
   #artist {
     font-size: 12px;
     margin-left: 0;
+    margin-top: 2px;
   }
 
   .tab2 {
@@ -474,19 +475,20 @@
   #image {
     height: 35px;
     width: 60px;
-    margin-top: 10px;
+    margin-top: 16px;
     margin-left: 6px;
   }
 
   #title {
     font-size: 11px;
-    margin-top: 0;
+    margin-top: 5px;
     margin-left: 0;
   }
 
   #artist {
     font-size: 9px;
     margin-left: 0;
+    margin-top: 2px;
   }
 
   .tab2 {

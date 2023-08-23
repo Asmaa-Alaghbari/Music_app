@@ -87,7 +87,6 @@ export default function Music_Tab(props) {
       </div>
 
       <div className="tab2">
-
         <div className="music-player">
           <div id="like" onClick={like} style={{ color: heartcolor }}>
             {heart ? <AiFillHeart /> : <AiOutlineHeart />}
@@ -130,39 +129,6 @@ export default function Music_Tab(props) {
           <div id="m1">{min + ":" + sec1 + sec2}</div>
 
           <div className="b">
-        <div className="mp=slide">
-          <div className="music-player">
-            <div id="like">
-              <div isActive={active} onClick={() => setActive(!active)}>
-                <AiOutlineHeart />
-              </div>
-            </div>
-            <div id="save">
-              <MdOutlineSaveAlt />
-            </div>
-            <div id="skip-back">
-              <TbPlayerSkipBackFilled />
-            </div>
-            <div id="prev">
-              <TbPlayerTrackPrevFilled />
-            </div>
-            <div id="pause">
-              <TbPlayerPauseFilled />
-            </div>
-            <div id="next">
-              <TbPlayerTrackNextFilled />
-            </div>
-            <div id="skip-forward">
-              <TbPlayerSkipForwardFilled />
-            </div>
-            <div id="repeat">
-              <TbRepeat />
-            </div>
-            <div id="shuffle">
-              <TbArrowsShuffle />
-            </div>
-          </div>
-          <div className="music">
             <input
               type="range"
               min="0"
