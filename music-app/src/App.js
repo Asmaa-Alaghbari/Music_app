@@ -18,10 +18,9 @@ function App() {
       <div className="components">
         <Sidenav />
         <div className="explore">
-          <Home />
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<Playlist />} />
+              <Route path="/" element={[<Home />, <Playlist />]} />
               <Route path="playlists-window" element={<PlaylistsWindow />} />
               <Route path="genres-window" element={<GenresWindow />} />
               <Route path="opened-playlist" element={<OpenedPlaylist />} />
