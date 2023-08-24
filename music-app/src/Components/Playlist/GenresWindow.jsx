@@ -16,6 +16,12 @@ export default function GenreWindow() {
 
       <div className="cards-list">
         <GenreCard />
+        <GenreCard />
+        <GenreCard />
+        <GenreCard />
+        <GenreCard />
+        <GenreCard />
+        <GenreCard />
       </div>
     </div>
   );

@@ -3,14 +3,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
-import Playlist from "./Components/Playlist/HomePlaylist";
-import PlaylistsWindow from "./Components/Playlist/PlaylistsWindow";
-import GenresWindow from "./Components/Playlist/GenresWindow";
+import Playlist from "./Components/Playlist/HomePlaylist"; // Playlist on Landing page
+import PlaylistsWindow from "./Components/Playlist/PlaylistsWindow"; // Playlists Window page
+import GenresWindow from "./Components/Playlist/GenresWindow"; // Genre Window page
+import OpenedPlaylist from "./Components/Playlist/OpenedPlaylist"; //Opened Playlist page
 import Sidenav from "./Components/Sidenav/Sidenav";
 import MusicTab from "./Components/MusicTab/MusicTab";
 
 import "./App.css";
-import OpenedPlaylist from "./Components/Playlist/OpenedPlaylist";
 
 export default function App() {
   return (
@@ -28,7 +28,7 @@ export default function App() {
           </BrowserRouter>
         </div>
       </div>
-      <MusicTab />
+      {/* <MusicTab /> */}
     </div>
   );
 }

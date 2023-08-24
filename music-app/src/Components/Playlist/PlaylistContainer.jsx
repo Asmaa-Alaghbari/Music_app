@@ -7,18 +7,8 @@ import CardPlaylist from "./PlaylistContainerCard";
 import "./HomePlaylist.css"; //Stylesheet
 
 export default function PlaylistContainer() {
-  window.onload = function () {
-    const buttonLeft = document.getElementById("slideLeft");
-    const buttonrRight = document.getElementById("slideRight");
-
-    buttonLeft.onclick = () => {
-      document.getElementById("playlist-container").scrollLeft -= 20;
-    };
-    buttonrRight.onclick = () => {
-      document.getElementById("playlist-container").scrollLeft += 20;
-    };
-  };
-
+  /* Create an array with 8 elements */
+  const playlists = new Array(8).fill(null);
   return (
     <div className="playlist-container">
       <div className="infos">
@@ -43,13 +33,11 @@ export default function PlaylistContainer() {
         <button className="arrow arrow-right" id="slideRight">
           <GrNext />
         </button>
+        {/* display the first 8 playlists because that's the length of the array that i created */}
         <div className="list-container">
-          <CardPlaylist />
-          <CardPlaylist />
-          <CardPlaylist />
-          <CardPlaylist />
-          <CardPlaylist />
-          <CardPlaylist />
+          {playlists.map((_, index) => (
+            <CardPlaylist key={index} />
+          ))}
         </div>
       </div>
     </div>
