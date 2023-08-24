@@ -28,7 +28,7 @@ function App() {
           </BrowserRouter>
         </div>
       </div>
-      <MusicTab />
+      {/* <MusicTab /> */}
     </div>
   );
 }

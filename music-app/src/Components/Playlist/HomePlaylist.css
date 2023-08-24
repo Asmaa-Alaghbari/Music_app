@@ -188,7 +188,7 @@
   grid-template-rows: auto;
 }
 
-.card-genre {
+.genre-card {
   display: flex;
   justify-content: center;
   align-items: center;
