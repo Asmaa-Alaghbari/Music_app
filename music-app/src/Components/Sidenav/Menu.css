@@ -1,5 +1,9 @@
 /* Menu.css */
 
+.menu-lists-header {
+  color: rgb(191, 197, 204);
+}
+
 .menu {
   margin-top: 20px;
 }
@@ -17,4 +21,15 @@
 /* Lists' icons */
 .icons-style {
   margin-right: 10px;
+}
+
+/* Menu items */
+.menu-lists {
+  text-decoration: none;
+  color: lightslategray;
+  cursor: pointer;
+}
+
+.menu-lists:hover {
+  color: white;
 }
