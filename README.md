@@ -37,6 +37,5 @@ During the development of the Music App, the team drew inspiration from various 
 
 - [Behance - Winamp Redesign](https://www.behance.net/gallery/156237037/Winamp-Redesign?tracking_source=search_projects|music+app+design+desktop)
 - [Dribbble - Musikin Aja Dashboard](https://dribbble.com/shots/17321874-Musikin-Aja-Dashboard)
-- [React Icons - Home](https://react-icons.github.io/react-icons)
 - [Spotify Web API Documentation](https://developer.spotify.com/documentation/web-api)
 
