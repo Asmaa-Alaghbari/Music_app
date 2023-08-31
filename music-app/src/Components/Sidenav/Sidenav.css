@@ -15,7 +15,7 @@
 .burger-icon {
   display: none;
   cursor: pointer;
-  color: lightslategray;
+  color: #161234;
   margin: 10px;
   font-size: 25px;
   width: 25px;
@@ -37,7 +37,7 @@
 
 .burger-icon:hover,
 .close-button:hover {
-  color: white;
+  color: #9464ca;
   cursor: pointer;
 }
 

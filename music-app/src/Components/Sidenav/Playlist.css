@@ -21,6 +21,7 @@ h2 {
 .playlist li {
   margin-bottom: 10px;
   color: lightslategray;
+  white-space: nowrap;
 }
 
 /* Playlist items */
@@ -107,6 +108,17 @@ input.playlist-input {
 .close-modal-icon:hover,
 .more-playlists:hover {
   color: white;
+  letter-spacing: 0.5px;
+}
+
+/* Active playlist item */
+.playlist-lists.active {
+  font-weight: bold;
+  color: lightblue;
+}
+
+.playlist-lists.active:hover {
+  color: white;
 }
 
 /* The new added playlist */
@@ -131,7 +143,6 @@ input.playlist-input {
   color: lightslategray;
   text-decoration: none;
   font-size: 0.9em;
-  float: right;
   cursor: pointer;
 }
 

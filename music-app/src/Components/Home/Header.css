@@ -1,48 +1,49 @@
+/* Header.css */
+
+/* Title + Search */
 .Header {
-  display: inline-block;
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 5px;
+  padding: 0 5%;
 }
 
+/* Home Title */
 .Title {
-  font-size: 30px;
-  font-weight: bold;
+  color: #161234;
 }
 
-.searchbar {
-  padding-bottom: 10px;
-  padding: 0;
-  border: none;
-  margin-right: auto;
-  margin-left: auto;
-  width: 70%;
-  font-size: 15px;
-  text-align: center;
-  outline: none;
-  display: inline;
-  align-items: center;
-  justify-content: center;
-}
-.search {
+/* Search Container */
+.search-container {
   display: flex;
   align-items: center;
-  display: inline-block;
-  background-color: white;
-  border-style: solid;
-  border-width: 1px;
+  background-color: transparent;
+  border: 1px solid;
   border-radius: 2rem;
-  padding-top: 5px;
+  width: 70%;
 }
-.bell {
-  margin-left: 750px;
-  margin-right: 40px;
+
+/* Search input */
+.searchbar-input {
+  border: none;
+  text-align: center;
+  outline: none;
+  margin: 5px;
+}
+
+/* Search Icon */
+.search-icon {
   font-size: 25px;
   cursor: pointer;
+  margin: 5px;
 }
-.glass {
-  font-size: 25px;
-  cursor: pointer;
-  margin-left: 10px;
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1024px) {
+
+  /* Title + Search */
+  .Header {
+    margin-top: 20px;
+  }
 }

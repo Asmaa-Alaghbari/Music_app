@@ -1,0 +1,74 @@
+/* Trending.css */
+
+/* Trending Container */
+.trending {
+  width: 30%;
+  margin: 0;
+}
+
+/* Song Container */
+.song {
+  display: flex;
+  align-items: center;
+  margin: 15px auto;
+  white-space: nowrap;
+}
+
+/* Trending Song Number */
+.song-number {
+  font-size: 1.1em;
+  margin-right: 10px;
+}
+
+/* Trending Song Details */
+.song-details {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Song Name */
+.song-name {
+  margin: 0 auto;
+}
+
+/* Artist Name */
+.artist-name {
+  margin: 5px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #888;
+}
+
+/* Artist Icon */
+.artist-icon {
+  margin-right: 5px;
+  color: #161234;
+}
+
+/* Play Song Button */
+.play-button {
+  margin-right: 5px;
+  font-size: 1.3em;
+  color: #62318d;
+  cursor: pointer;
+}
+
+.play-button:hover {
+  color: #161234;
+}
+
+/* Dots Button */
+.dots-button {
+  font-size: 1em;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* Small devices */
+@media only screen and (max-width: 768px) {
+
+  .trending {
+    margin: 0 auto;
+  }
+}
