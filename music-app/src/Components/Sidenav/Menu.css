@@ -16,6 +16,7 @@
 .menu li {
   margin-bottom: 10px;
   color: lightslategray;
+  white-space: nowrap;
 }
 
 /* Lists' icons */
@@ -31,5 +32,16 @@
 }
 
 .menu-lists:hover {
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* Active menu item */
+.menu-lists.active {
+  font-weight: bold;
+  color: lightblue;
+}
+
+.menu-lists.active:hover {
   color: white;
 }
