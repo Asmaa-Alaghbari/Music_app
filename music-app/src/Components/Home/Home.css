@@ -1,29 +1,131 @@
-.container .maincomponents {
-  display: flex;
-  align-items: center;
-}
+/* Home.css */
 
+/* All components */
 .container {
   position: relative;
-  margin-top: 50px;
-  background-color: white;
-  border-radius: 100px;
+  margin-top: 10px;
+  background-color: transparent;
 }
 
-.artist {
-  margin-bottom: 85px;
-  margin-left: 50px;
-}
-
-.seemore {
-  color: rgb(136, 136, 136);
-}
-.seemore2 {
-  color: rgb(136, 136, 136);
-  margin-left: 50px;
-}
-.Top {
+/* Main + Trending */
+.container .main-components {
   display: flex;
   align-items: center;
-  margin-left: 5%;
+  justify-content: space-evenly;
+}
+
+/* Trending Container */
+.trending-container {
+  margin: 0;
+}
+
+/* Trending Title */
+.trending-title {
+  text-align: left;
+  margin: 20px;
+}
+
+/* See more buttons */
+.see-more {
+  color: lightslategray;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.see-more:hover {
+  color: #161234;
+}
+
+/* Top Artists */
+.topArtist-elements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Top Artists Title */
+.topArtist-title {
+  text-align: left;
+  margin: 20px;
+  margin-bottom: 5px;
+}
+
+/* Top Artists Header */
+.topArtist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 20px;
+}
+
+/* Top Artists Container */
+.topArtist-container {
+  margin: 5px;
+}
+
+/* See More Artists */
+.topArtist-container .see-more {
+  margin: 15px;
+  cursor: pointer;
+}
+
+/* Top Artists elements */
+.topArtist-elements {
+  margin-bottom: 30px;
+}
+
+/* Top Artists Items */
+.topArtist-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+/* Top Artists arrows */
+.topArtist-arrow {
+  color: #161234;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 0.9em;
+}
+
+.topArtist-arrow:hover {
+  color: #9464ca;
+  font-size: 1em;
+}
+
+/* Small devices */
+@media only screen and (max-width: 768px) {
+
+  /* Main + Trending */
+  .container .main-components {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Trending Title */
+  .trending-title {
+    margin-left: 30px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1024px) {
+
+  /* Trending Title */
+  .trending-title {
+    margin-left: 0px;
+  }
+
+  /* Main + Trending */
+  .container .main-components {
+    display: flex;
+    align-items: center;
+  }
 }

@@ -1,21 +1,22 @@
+// Header.jsx
+
 import React from "react";
-import "./Header.css";
-import { GoBell } from "react-icons/go";
 import { PiMagnifyingGlass } from "react-icons/pi";
+
+import "./Header.css";
 
 const Header = () => {
   return (
-    <div>
-      <div className="Header">
-        <h className="Title">Home</h>
-        <span className="bell">
-          <GoBell />
-        </span>
+    <div className="Header">
+      <h1 className="Title">Home</h1>
+      <div className="search-container">
+        <PiMagnifyingGlass className="search-icon" />
+        <input
+          className="searchbar-input"
+          type="text"
+          placeholder="Type to search..."
+        />
       </div>
-      <span className="search">
-        <PiMagnifyingGlass className="glass" />
-        <input className="searchbar" type="text" />
-      </span>
     </div>
   );
 };
