@@ -1,0 +1,24 @@
+.Dashboard {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .components {
+    display: flex;
+  }
+
+  .explore {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 75%;
+    height: 95%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .explore {
+    width: 85%;
+    height: 95%;
+  }
+}
