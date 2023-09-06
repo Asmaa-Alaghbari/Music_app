@@ -57,7 +57,7 @@ export default function Home() {
         {/* Trending */}
         <div className="trending-container">
           <h2 className="trending-title">Trending</h2>
-          {trendingItems}
+          <div className="trending-items">{trendingItems}</div>
           <p className="see-more">See More</p>
         </div>
       </div>

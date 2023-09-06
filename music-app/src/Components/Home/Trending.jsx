@@ -13,7 +13,7 @@ const Trending = ({ index }) => {
 
   return (
     <div className="trending">
-      <div className="song">
+      <div className="trending-song">
         <span className="song-number">{sequentialNumber}</span>
         <div className="song-details">
           <h5 className="song-name">Song Name</h5>

@@ -10,7 +10,7 @@
 }
 
 .playlist-container .infos {
-  margin: 0 2.5rem;
+  margin: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,9 +48,9 @@
 }
 
 .playlist-container {
-  width: 100%;
+  width: 85%;
   height: 12rem;
-  margin: 1rem 0;
+  margin: 1rem auto;
 }
 
 .card-playlist-list {
@@ -207,24 +207,28 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
   }
+
   .genre-container .card-genre-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
   }
 }
+
 @media (min-width: 620px) {
   .list-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
   }
+
   .genre-container .card-genre-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
   }
 }
+
 @media (min-width: 768px) {
   .playlist-container {
     margin: 1rem auto;
@@ -264,6 +268,7 @@
     justify-content: space-around;
     align-items: center;
   }
+
   .playlist-container {
     width: 60%;
     height: 13rem;

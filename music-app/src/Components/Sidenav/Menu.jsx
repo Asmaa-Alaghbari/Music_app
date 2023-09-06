@@ -8,6 +8,7 @@ import { BsPersonFill } from "react-icons/bs"; // Artists icon
 import { NavLink } from "react-router-dom"; // Open Playlists Window page
 import PlaylistsWindow from "../Playlist/PlaylistsWindow"; // Playlists Window page
 import GenresWindow from "../Playlist/GenresWindow"; // Genres Window page
+import ArtistsWindow from "../Home/ArtistsWindow"; // Artists Window page
 
 import "./Menu.css"; // Stylesheet
 
@@ -63,9 +64,12 @@ export default function Menu() {
             Albums
           </NavLink>
         </li>
+
+        {/* Show all Artists */}
         <li>
           <NavLink
-            to="/artists"
+            to="/artists-window"
+            component={ArtistsWindow}
             className={`menu-lists ${activeLink === "artists" ? "active" : ""}`}
             onClick={() => handleLinkClick("artists")}
           >

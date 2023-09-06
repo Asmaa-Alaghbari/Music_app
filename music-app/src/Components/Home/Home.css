@@ -23,6 +23,7 @@
 .trending-title {
   text-align: left;
   margin: 20px;
+  width: 85%;
 }
 
 /* See more buttons */
@@ -48,8 +49,8 @@
 /* Top Artists Title */
 .topArtist-title {
   text-align: left;
-  margin: 20px;
   margin-bottom: 5px;
+  padding-top: 0;
 }
 
 /* Top Artists Header */
@@ -62,7 +63,11 @@
 
 /* Top Artists Container */
 .topArtist-container {
-  margin: 5px;
+  border-radius: 1.5rem;
+  height: 100%;
+  width: 85%;
+  margin: 0 auto;
+  padding: 0 0.2rem;
 }
 
 /* See More Artists */
@@ -111,7 +116,18 @@
 
   /* Trending Title */
   .trending-title {
-    margin-left: 30px;
+    margin-left: auto;
+  }
+
+  /* Trending Container Lists */
+  .trending-container .trending-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    height: 100%;
+    width: 85%;
+    margin: 0 auto;
+    padding: 0 0.2rem;
   }
 }
 

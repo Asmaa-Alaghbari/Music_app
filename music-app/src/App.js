@@ -12,6 +12,7 @@ import GenresWindow from "./Components/Playlist/GenresWindow"; // Genre Window p
 import OpenedPlaylist from "./Components/Playlist/OpenedPlaylist"; //Opened Playlist page
 import Sidenav from "./Components/Sidenav/Sidenav";
 import MusicTab from "./Components/MusicTab/MusicTab";
+import ArtistsWindow from "./Components/Home/ArtistsWindow";
 
 import "./App.css";
 
@@ -36,13 +37,14 @@ function App() {
               <Sidenav />
               <div className="explore">
                 <Routes>
-                  <Route path="/" element={[<Playlist />]} />
+                  <Route path="/" element={[<Home />, <Playlist />]} />
                   <Route
                     path="playlists-window"
                     element={<PlaylistsWindow />}
                   />
                   <Route path="genres-window" element={<GenresWindow />} />
                   <Route path="opened-playlist" element={<OpenedPlaylist />} />
+                  <Route path="artists-window" element={<ArtistsWindow />} />
                 </Routes>
               </div>
             </div>

@@ -1,7 +1,7 @@
 // Main.jsx
 
 import React from "react";
-import girl from "./girl.png";
+import girl from "./Images/girl.png";
 
 import "./Main.css";
 
