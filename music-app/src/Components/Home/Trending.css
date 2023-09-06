@@ -7,7 +7,7 @@
 }
 
 /* Song Container */
-.song {
+.trending-song {
   display: flex;
   align-items: center;
   margin: 15px auto;
@@ -62,7 +62,7 @@
 .dots-button {
   font-size: 1em;
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 20px;
 }
 
 /* Small devices */
@@ -70,5 +70,6 @@
 
   .trending {
     margin: 0 auto;
+    width: 100%;
   }
 }

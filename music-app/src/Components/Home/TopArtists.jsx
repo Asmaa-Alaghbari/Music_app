@@ -8,7 +8,7 @@ import "./TopArtists.css";
 
 const TopArtists = () => {
   return (
-    <div className="TopArtists">
+    <div className="topArtists">
       <div className="topArtists-details">
         <h5 className="topArtists-name">Artist Name</h5>
         <p className="topArtists-paragraph">
