@@ -1,4 +1,4 @@
-import "./MusicTab.css"; //Stylesheet
+vimport "./MusicTab.css"; //Stylesheet
 import React, { useState } from "react";
 import { BsFillVolumeUpFill, BsFillVolumeMuteFill } from "react-icons/bs";
 import CurrentTrack from "./CurrentTrack";

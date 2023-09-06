@@ -1,35 +1,24 @@
+// TopArtists.jsx
+
 import React from "react";
+import { RiHeartsFill } from "react-icons/ri";
+import { FcMusic } from "react-icons/fc";
+
 import "./TopArtists.css";
-import { FaUser } from "react-icons/fa";
-import { PiDotBold } from "react-icons/pi";
-import { FaPlayCircle } from "react-icons/fa";
-import { HiDotsVertical } from "react-icons/hi";
 
 const TopArtists = () => {
   return (
     <div className="TopArtists">
-      <div className="songscontainer">
-        <div className="songs">
-          <div className="count">01</div>
-          <div className="song">
-            <div className="imgBox">
-              <img src="" alt="" />
-            </div>
-            <div className="section">
-              <p className="songName">
-                Song Name
-                <p className="spanArtist">
-                  <FaUser className="user" />
-                  Artist name <PiDotBold /> Music Genre
-                </p>
-              </p>
-              <div className="time">
-                00:00 <FaPlayCircle className="playbtn" />
-                <HiDotsVertical className="dots" />
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="topArtists-details">
+        <h5 className="topArtists-name">Artist Name</h5>
+        <p className="topArtists-paragraph">
+          <RiHeartsFill className="topArtist-icon" />
+          1000 Followers
+        </p>
+        <p className="topArtists-paragraph">
+          <FcMusic className="topArtist-icon" />
+          1.2M Plays
+        </p>
       </div>
     </div>
   );

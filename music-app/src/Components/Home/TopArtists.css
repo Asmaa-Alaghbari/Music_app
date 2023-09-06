@@ -1,80 +1,13 @@
-.TopArtists.title {
-  font-size: 18px;
-  color: black;
-}
+/* TopArtists.css */
 
-.songs {
+.topArtists-paragraph {
+  color: #888;
+  font-size: 0.9em;
   display: flex;
   align-items: center;
-  font-size: 14px;
-  font-weight: 600;
-  color: black;
-  width: 100%;
 }
 
-.count {
-  margin-right: 10px;
-  color: rgb(136, 136, 136);
-}
-.song {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.song .imgBox {
-  width: 45px;
-  height: 45px;
-  min-width: 45px;
-  border-radius: 1rem;
-  background-image: linear-gradient(
-    to right,
-    rgb(187, 131, 239),
-    rgb(192, 0, 192)
-  );
-  margin-right: 10px;
-  margin-left: 20px;
-  overflow: hidden;
-}
-
-.song .imgBox img {
-  width: 100px;
-  height: 100%;
-  object-fit: cover;
-}
-.song .section {
-  display: flex;
-  width: 100%;
-}
-.song .section .songName .spanArtist {
-  font-size: 10px;
-  display: flex;
-  align-items: center;
-  color: rgb(136, 136, 136);
-}
-.song .section .songName .spanArtist .user {
+/* Top Artists Icons */
+.topArtist-icon {
   margin-right: 5px;
-}
-
-.time {
-  display: flex;
-  align-items: center;
-  margin-left: 80px;
-}
-.time .playbtn {
-  margin-left: 50px;
-  font-size: 30px;
-  background-image: linear-gradient(
-    to right,
-    rgb(187, 131, 239),
-    rgb(192, 0, 192)
-  );
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-.time .dots {
-  font-size: 15px;
-  color: rgb(204, 204, 204);
-  margin-left: 10px;
 }

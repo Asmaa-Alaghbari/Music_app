@@ -6,7 +6,9 @@ import { MdPlaylistAdd } from "react-icons/md"; // Playlist icon
 import { GiMusicalNotes } from "react-icons/gi"; // Music note icon
 import { AiOutlineHeart } from "react-icons/ai"; // Heart icon
 import { FaTimes } from "react-icons/fa"; // Close icon
+import { Link } from "react-router-dom"; // Open Playlists Window page
 import AlbumPicture from "./images/AlbumPicture.png"; // Album picture
+import PlaylistsWindow from "../Playlist/PlaylistsWindow"; // Playlists Window page
 
 import "./Playlist.css"; // Stylesheet
 
@@ -76,24 +78,28 @@ export default function Playlist({ closeSidenav }) {
 
   return (
     <div className="playlist">
-      <h3 className="playlist-lists">Playlist</h3>
+      <h3 className="playlist-lists-header">Playlist</h3>
       <ul>
         <li onClick={openCreateNewAlbumModal}>
           <MdPlaylistAdd className="icons-style" />
           <span className="playlist-lists">Create new</span>
         </li>
+
         <li>
           <AiOutlineHeart className="icons-style" />
           <span className="playlist-lists">Favourite</span>
         </li>
+
         <li>
           <GiMusicalNotes className="icons-style" />
           <span className="playlist-lists">Inspirational</span>
         </li>
+
         <li>
           <GiMusicalNotes className="icons-style" />
           <span className="playlist-lists">Hits</span>
         </li>
+
         <li>
           <GiMusicalNotes className="icons-style" />
           <span className="playlist-lists">Top 100</span>
@@ -113,8 +119,16 @@ export default function Playlist({ closeSidenav }) {
           </li>
         ))}
 
-        {/* Show all playlists */}
-        <p className="more-playlists">Show All</p>
+        {/* Show all Playlists/Albums */}
+        {
+          <Link
+            to="/playlists-window"
+            component={PlaylistsWindow}
+            className="more-playlists"
+          >
+            Show All
+          </Link>
+        }
       </ul>
 
       {/* Modal for creating new playlist */}

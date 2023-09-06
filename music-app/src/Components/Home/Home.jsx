@@ -1,36 +1,79 @@
-import React from "react";
+// Home.jsx
+
+import React, { useEffect, useState } from "react";
 import Main from "./Main";
 import Header from "./Header";
-import "./Home.css";
+import Trending from "./Trending";
 import TopArtists from "./TopArtists";
-import TopArtists2 from "./TopArtists2";
+import { GrPrevious, GrNext } from "react-icons/gr"; // left arrow icon and right arrow icon
 
-function Home() {
+import "./Home.css";
+
+export default function Home() {
+  // Number of trending items to display
+  const numTrendingItems = 3;
+  const trendingItems = [];
+  for (let i = 0; i < numTrendingItems; i++) {
+    trendingItems.push(<Trending key={i} index={i} />);
+  }
+
+  // Number of Top Artists items to display
+  const [numTopArtistItems, setNumTopArtistItems] = useState(5);
+  useEffect(() => {
+    // Update the number of top artist items based on screen width
+    const updateNumTopArtists = () => {
+      if (window.innerWidth >= 1024) {
+        setNumTopArtistItems(8); // Display more items on larger screens
+      } else if (window.innerWidth <= 480) {
+        setNumTopArtistItems(3); // Display less items on smaller screens
+      } else {
+        setNumTopArtistItems(4); // Default number of items
+      }
+    };
+
+    // Initial call
+    updateNumTopArtists();
+
+    // Update on window resize
+    window.addEventListener("resize", updateNumTopArtists);
+
+    return () => {
+      window.removeEventListener("resize", updateNumTopArtists);
+    };
+  }, []);
+
+  // Create the top artist items
+  const topArtistItems = [];
+  for (let i = 0; i < numTopArtistItems; i++) {
+    topArtistItems.push(<TopArtists key={i} />);
+  }
+
   return (
     <div className="container">
       <Header />
-      <div className="maincomponents">
+      <div className="main-components">
         <Main />
 
-        <div className="artist">
-          <h2 className="title">Trending</h2>
-          <TopArtists />
-          <TopArtists />
-          <TopArtists />
-
-          <p className="seemore">See More</p>
+        {/* Trending */}
+        <div className="trending-container">
+          <h2 className="trending-title">Trending</h2>
+          {trendingItems}
+          <p className="see-more">See More</p>
         </div>
       </div>
 
-      <div className="Top">
-        <h2>Top Artist:</h2>
-        <TopArtists2 />
-        <TopArtists2 />
-        <TopArtists2 />
-        <p className="seemore2">See More</p>
+      {/* Top Artists */}
+      <div className="topArtist-container">
+        <div className="topArtist-header">
+          <h2 className="topArtist-title">Top Artist</h2>
+          <p className="see-more">See More</p>
+        </div>
+        <div className="topArtist-elements">
+          <GrPrevious className="topArtist-arrow" />
+          <div className="topArtist-items">{topArtistItems}</div>
+          <GrNext className="topArtist-arrow" />
+        </div>
       </div>
     </div>
   );
 }
-
-export default Home;

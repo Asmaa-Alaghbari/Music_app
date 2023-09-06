@@ -6,7 +6,7 @@
   width: 25%;
   position: fixed;
   padding: 20px;
-  background-color: #161234;
+  background-color: #161240;
   text-align: left;
   color: white;
 }
@@ -30,19 +30,34 @@
   top: 10px;
   left: 10px;
   font-size: 20px;
+  width: 30px;
+  height: 30px;
 }
 
-li:hover,
+
+.burger-icon:hover,
 .close-button:hover {
-  color: white;
+  color: #9464ca;
   cursor: pointer;
 }
 
 /* Show the sidenav when showSidenav is true */
 .sidenav.show {
   display: block;
-  width: 30%;
+  width: 50%;
   transform-style: flat;
+}
+
+/* Scrolling */
+.sidenav.show .components-container {
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+}
+
+/* Customize the scrollbar */
+.sidenav.show .components-container::-webkit-scrollbar {
+  width: 0px;
 }
 
 /* Hide the full menu by default for smaller screens */

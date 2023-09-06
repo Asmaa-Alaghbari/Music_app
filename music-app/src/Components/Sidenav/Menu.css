@@ -1,7 +1,11 @@
 /* Menu.css */
 
+.menu-lists-header {
+  color: rgb(191, 197, 204);
+}
+
 .menu {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .menu ul {
@@ -12,9 +16,32 @@
 .menu li {
   margin-bottom: 10px;
   color: lightslategray;
+  white-space: nowrap;
 }
 
 /* Lists' icons */
 .icons-style {
   margin-right: 10px;
+}
+
+/* Menu items */
+.menu-lists {
+  text-decoration: none;
+  color: lightslategray;
+  cursor: pointer;
+}
+
+.menu-lists:hover {
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* Active menu item */
+.menu-lists.active {
+  font-weight: bold;
+  color: lightblue;
+}
+
+.menu-lists.active:hover {
+  color: white;
 }
