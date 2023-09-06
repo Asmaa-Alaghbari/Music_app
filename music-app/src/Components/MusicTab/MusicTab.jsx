@@ -1,9 +1,7 @@
-import "./MusicTab.css";
-import "./slider_style.css";
+import "./MusicTab.css"; //Stylesheet
 import React, { useState } from "react";
-import Tab1 from "./Tab1";
-import Tab2 from "./Tab2";
 import { BsFillVolumeUpFill, BsFillVolumeMuteFill } from "react-icons/bs";
+import CurrentTrack from "./CurrentTrack";
 
 export default function Music_Tab(props) {
   // let min, sec1, sec2, min2, sec12, sec22;
@@ -65,11 +63,8 @@ export default function Music_Tab(props) {
   // };
 
   return (
-    <div className="bar">
-      <Tab1 />
-      <Tab2 />
-
-      <div className="tab tab-3"></div>
+    <div>
+      <CurrentTrack />
     </div>
   );
 }
