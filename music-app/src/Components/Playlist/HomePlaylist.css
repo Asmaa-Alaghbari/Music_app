@@ -9,6 +9,10 @@
   height: fit-content;
 }
 
+.empty-div {
+  height: 5rem;
+}
+
 .playlist-container .infos {
   margin: 0 2.5rem;
   display: flex;
@@ -258,7 +262,6 @@
 
 @media (min-width: 1024px) {
   .playlists {
-    margin-top: 1rem;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -289,5 +292,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+  }
+  .empty-div {
+    height: 25rem;
   }
 }

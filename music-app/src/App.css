@@ -23,6 +23,5 @@ body {
 @media (min-width: 1024px) {
   .explore {
     width: 85%;
-    height: 95%;
   }
 }

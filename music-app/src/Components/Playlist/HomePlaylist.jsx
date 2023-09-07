@@ -8,6 +8,7 @@ export default function Playlist() {
     <div className="playlists">
       <PlaylistContainer />
       <GenreContainer />
+      <div className="empty-div"></div>
     </div>
   );
 }

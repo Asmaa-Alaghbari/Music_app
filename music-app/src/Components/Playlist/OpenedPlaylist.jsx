@@ -14,7 +14,6 @@ export default function OpenedPlaylist() {
   useEffect(() => {
     const getInitialPlaylist = async () => {
       const response = await axios.get(
-        // url to access any playlist from spotify
         `https://api.spotify.com/v1/playlists/${selectedPlaylistId}`,
         {
           headers: {
@@ -33,7 +32,7 @@ export default function OpenedPlaylist() {
         tracks: response.data.tracks.items.map(({ track }) => ({
           id: track.id,
           name: track.name,
-          artist: track.artists.map((artist) => artist.name),
+          artists: track.artists.map((artist) => artist.name),
           image: track.album.images[2].url,
           duration: track.duration_ms,
           album: track.album.name,
@@ -43,10 +42,8 @@ export default function OpenedPlaylist() {
       };
       dispatch({ type: reducerCases.SET_PLAYLIST, selectedPlaylist });
     };
-    console.log(selectedPlaylistId);
     getInitialPlaylist();
   }, [token, dispatch, selectedPlaylistId]);
-
   return (
     <>
       {selectedPlaylist ? (

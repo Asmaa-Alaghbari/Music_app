@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // use to open Playlists Window page
 import PlaylistsWindow from "./PlaylistsWindow";
-import { GrPrevious, GrNext } from "react-icons/gr"; // left arrow icon and right arrow icon
+import { GrPrevious, GrNext } from "react-icons/gr"; // left and right arrow icons
 import CardPlaylist from "./PlaylistContainerCard";
 
 import "./HomePlaylist.css"; //Stylesheet

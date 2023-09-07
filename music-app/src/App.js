@@ -36,7 +36,7 @@ function App() {
               <Sidenav />
               <div className="explore">
                 <Routes>
-                  <Route path="/" element={[<Playlist />]} />
+                  <Route path="/" element={[<Home />, <Playlist />]} />
                   <Route
                     path="playlists-window"
                     element={<PlaylistsWindow />}

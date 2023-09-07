@@ -13,14 +13,6 @@ export default function Login() {
   // this is a URL created with the AUTH_ENDPOINT, CLIENT_ID, REDIRECT_URL, code
   const loginURL = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=token&show_dialog=true`;
 
-  // this are the thnigs you can access from the API
-  const scope = [
-    "user-read-playback-state",
-    "user-read-recently-played",
-    "user-read-playback-state",
-    "user-top-read",
-  ];
-
   return (
     <div>
       <div className="login">
