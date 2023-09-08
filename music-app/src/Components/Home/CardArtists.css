@@ -1,0 +1,36 @@
+/* CardArtists.css */
+
+/* Artists Card */
+.artists-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    width: 12rem;
+    height: 12rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.artists-card:hover {
+    transform: scale(1.05);
+}
+
+/* Artists Name */
+.artists-name {
+    font-size: 0.8em;
+    margin: 1rem 0;
+}
+
+/* Artists Image */
+.artists-img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+}
