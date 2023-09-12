@@ -4,10 +4,11 @@ import React, { useEffect, useState } from "react";
 import Main from "./Main";
 import Header from "./Header";
 import Trending from "./Trending";
-import TopArtists from "./TopArtists";
+import { NavLink } from "react-router-dom"; // Open Artists Window page
 import { GrPrevious, GrNext } from "react-icons/gr"; // left arrow icon and right arrow icon
 
 import "./Home.css";
+import CardArtist from "./CardArtists";
 
 export default function Home() {
   // Number of trending items to display
@@ -45,7 +46,7 @@ export default function Home() {
   // Create the top artist items
   const topArtistItems = [];
   for (let i = 0; i < numTopArtistItems; i++) {
-    topArtistItems.push(<TopArtists key={i} />);
+    topArtistItems.push(<CardArtist key={i} />);
   }
 
   return (
@@ -66,7 +67,9 @@ export default function Home() {
       <div className="topArtist-container">
         <div className="topArtist-header">
           <h2 className="topArtist-title">Top Artist</h2>
-          <p className="see-more">See More</p>
+          <NavLink to="/artists-window" className="see-more">
+            See More
+          </NavLink>
         </div>
         <div className="topArtist-elements">
           <GrPrevious className="topArtist-arrow" />

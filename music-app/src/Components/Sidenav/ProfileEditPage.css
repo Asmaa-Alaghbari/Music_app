@@ -1,0 +1,75 @@
+/* ProfileEditPage.css */
+
+/* Show edit profile text on hover */
+.profile-img-container:hover .edit-profile-text,
+.profile-img-container:hover .edit-profile-text-modal {
+    opacity: 1;
+}
+
+/* Profile form */
+.profile-form {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #6630a3;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Form profile picture */
+.profile-img-container {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 100%;
+    background-color: transparent;
+}
+
+/* Profile username input */
+input.profile-input {
+    width: 50%;
+    height: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* Profile about input */
+.profile-about {
+    width: 75%;
+    height: 50px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Profile buttons */
+.profile-btn {
+    width: 50px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #402c57;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-btn:hover {
+    background-color: #b27af1;
+}
+
+.profile-btn:active {
+    background-color: #8d56b7;
+}
+
+/* Successfully saved message */
+.success-message {
+    color: white;
+}

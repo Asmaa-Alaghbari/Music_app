@@ -4,19 +4,9 @@ import React from "react"; // React
 import { MdNavigateBefore } from "react-icons/md"; // Back button icon
 import { Link } from "react-router-dom"; // Back button to Home Page
 import Playlist from "../Playlist/HomePlaylist"; // Home Page
-import Artist from "./Images/Artist.jpeg"; // Artist image
+import CardArtist from "./CardArtists"; // Card for each artist
 
 import "./ArtistsWindow.css"; // Stylesheet
-
-// Card for each artist
-export function CardArtist({ index }) {
-  return (
-    <div className="artists-card">
-      <img src={Artist} alt="artists-img" className="artists-img" />
-      <h4 className="artists-name">Artist Name</h4>
-    </div>
-  );
-}
 
 // Artists Window
 export default function ArtistsWindow() {
@@ -39,4 +29,3 @@ export default function ArtistsWindow() {
     </div>
   );
 }
-

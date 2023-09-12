@@ -33,7 +33,7 @@ export default function Menu() {
             onClick={() => handleLinkClick("explore")}
           >
             <TiHome className="icons-style" />
-            Explore
+            Home
           </NavLink>
         </li>
 
