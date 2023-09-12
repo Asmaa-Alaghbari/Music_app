@@ -1,6 +1,6 @@
 // App.js is the main file of the project
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { reducerCases } from "./utils/constants";
 import { useStateProvider } from "./utils/stateProvider";
@@ -10,7 +10,8 @@ import Playlist from "./Components/Playlist/HomePlaylist"; // Playlist on Landin
 import PlaylistsWindow from "./Components/Playlist/PlaylistsWindow"; // Playlists Window page
 import GenresWindow from "./Components/Playlist/GenresWindow"; // Genre Window page
 import OpenedPlaylist from "./Components/Playlist/OpenedPlaylist"; //Opened Playlist page
-import Sidenav from "./Components/Sidenav/Sidenav";
+import Sidenav from "./Components/Sidenav/Sidenav"; // Sidenav component
+import ProfileEditPage from "./Components/Sidenav/ProfileEditPage"; // Profile Edit page
 import MusicTab from "./Components/MusicTab/MusicTab";
 import ArtistsWindow from "./Components/Home/ArtistsWindow";
 
@@ -38,6 +39,8 @@ function App() {
               <div className="explore">
                 <Routes>
                   <Route path="/" element={[<Home />, <Playlist />]} />
+                  <Route path="profile-edit" element={<ProfileEditPage />} />
+
                   <Route
                     path="playlists-window"
                     element={<PlaylistsWindow />}
